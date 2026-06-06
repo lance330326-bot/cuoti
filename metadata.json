@@ -1,0 +1,6 @@
+{
+  "name": "错题举一反三打印机",
+  "description": "专为小学1-6年级设计的错题学习工具，支持数学、语文、英语拍照识别，智能提取学科知识点，一键生成3道相似变式题与易错点深度解析，支持错题本收藏及多选拼版打印 PDF。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-slate-850: #1b2330;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro SC", "SF Pro Display", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #F9FAFB;
+  color: #1F2937;
+}
+
+/* Print Specific Configuration Styles */
+@media print {
+  /* Hide the entire frontend page body elements */
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+  }
+  
+  #root, 
+  .screen-only,
+  header,
+  footer,
+  nav,
+  input,
+  button,
+  .fixed {
+    display: none !important;
+  }
+  
+  /* Show only the targeted clean print segment */
+  #pure-printable-section {
+    display: block !important;
+    visibility: visible !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  #pure-printable-section * {
+    visibility: visible !important;
+  }
+
+  .break-inside-avoid {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
+
+/* Custom scrollbars for high fidelity */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E5E7EB;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e1;
+}
+
